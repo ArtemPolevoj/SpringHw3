@@ -1,0 +1,27 @@
+package ru.gb.springbootlesson3;
+
+
+import io.swagger.v3.oas.models.OpenAPI;
+import io.swagger.v3.oas.models.info.Contact;
+import io.swagger.v3.oas.models.info.Info;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class SwaggerConfig {
+    @Bean
+    public OpenAPI customOpenAPI() {
+        return new OpenAPI()
+                .info(
+                        new Info()
+                                .title("spring-boot-lesson-3")
+                                .version("1.0.0")
+                                .contact(
+                                        new Contact()
+                                                .email("artempolevoj@yandex.ru")
+                                                .url("https://github.com/ArtemPolevoj")
+                                                .name("Polevoj Artem")
+                                )
+                );
+    }
+}
