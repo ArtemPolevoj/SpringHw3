@@ -47,4 +47,7 @@ public class IssueRepository {
             }
         }
     }
+    public List<Issue> getAll(){
+        return List.copyOf(list);
+    }
 }
