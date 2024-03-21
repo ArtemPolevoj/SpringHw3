@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>ReaderId</title>
+</head>
+<body>
+    <p>This is your reader name: <span th:text="${reader}"></span></p>
+    <ul>
+        <li th:each="item: ${list}" th:text="${item}"></li>
+    </ul>
+</body>
+</html>
